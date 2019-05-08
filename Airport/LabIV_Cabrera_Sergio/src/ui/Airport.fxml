@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.AirportGUI">
+   <top>
+      <Pane blendMode="DARKEN" prefHeight="61.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="244.0" layoutY="17.0" text="DEPARTURES" textAlignment="CENTER">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <bottom>
+            <Pagination fx:id="pageIndicator" prefHeight="43.0" prefWidth="600.0" visible="false" BorderPane.alignment="CENTER" />
+         </bottom>
+         <top>
+            <HBox prefHeight="23.0" prefWidth="476.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hour" />
+                  <Separator prefWidth="200.0" visible="false" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Airline" />
+                  <Separator prefWidth="200.0" visible="false" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Flight" />
+                  <Separator prefWidth="200.0" visible="false" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Destination" />
+                  <Separator prefWidth="200.0" visible="false" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Terminal" />
+                  <Separator prefWidth="200.0" visible="false" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Gate" />
+                  <Separator prefWidth="200.0" visible="false" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Remarks" />
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </center>
+   <left>
+      <Pane prefHeight="339.0" prefWidth="124.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="14.0" layoutY="300.0" mnemonicParsing="false" onAction="#reset" text="Reset" />
+            <TextField fx:id="flightsQuantity" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="41.0" />
+            <Button layoutX="62.0" layoutY="14.0" mnemonicParsing="false" onAction="#createFlights" text="Create" />
+            <ToggleButton layoutX="14.0" layoutY="71.0" mnemonicParsing="false" onAction="#changeOrientation" prefHeight="25.0" prefWidth="100.0" text="UpsideDown" />
+            <MenuButton layoutX="14.0" layoutY="151.0" mnemonicParsing="false" text="Search">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Hour" />
+                <MenuItem mnemonicParsing="false" text="Airline" />
+                  <MenuItem mnemonicParsing="false" text="Flight" />
+                  <MenuItem mnemonicParsing="false" text="Destination" />
+                  <MenuItem mnemonicParsing="false" text="Terminal" />
+                  <MenuItem mnemonicParsing="false" text="Gate" />
+                  <MenuItem mnemonicParsing="false" text="Remarks" />
+              </items>
+            </MenuButton>
+            <MenuButton layoutX="14.0" layoutY="112.0" mnemonicParsing="false" text="Order by">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#orderByHour" text="Hour" />
+                  <MenuItem mnemonicParsing="false" onAction="#orderByAirline" text="Airline" />
+                  <MenuItem mnemonicParsing="false" onAction="#orderByFlight" text="Flight" />
+                  <MenuItem mnemonicParsing="false" onAction="#orderByDestination" text="Destination" />
+                  <MenuItem mnemonicParsing="false" onAction="#orderByTerminal" text="Terminal" />
+                  <MenuItem mnemonicParsing="false" onAction="#orderByGate" text="Gate" />
+                  <MenuItem mnemonicParsing="false" onAction="#orderByRemark" text="Remarks" />
+               </items>
+            </MenuButton>
+         </children>
+      </Pane>
+   </left>
+</BorderPane>

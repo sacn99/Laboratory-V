@@ -1,0 +1,25 @@
+Tokyo
+New York
+London
+Paris
+Vienna
+Los Angeles
+Hong Kong
+Singapore
+Toronto
+Seoul
+Zurich
+Stockholm
+Sydney
+Helsinki
+Osaka-Kobe
+Chicago
+Dublin
+Shanghai
+Boston
+Beijing
+Oslo
+Geneva
+Moscow
+San Francisco
+Washington
